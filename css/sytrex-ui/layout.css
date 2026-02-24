@@ -1,0 +1,101 @@
+/* ------------------------------------------------ */
+/* GLOBAL RESET                                      */
+/* ------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: radial-gradient(circle at top, #0a0f3d 0%, #000000 70%);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ------------------------------------------------ */
+/* CONTAINER                                         */
+/* ------------------------------------------------ */
+
+.container,
+.section,
+footer,
+main {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* ------------------------------------------------ */
+/* SECTION                                           */
+/* ------------------------------------------------ */
+
+.section {
+    background: linear-gradient(145deg, #0d1225, #020617);
+    border-radius: var(--radius-lg);
+    padding: 24px 22px 26px;
+    margin-bottom: 22px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-soft);
+}
+
+.section h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.section h3 {
+    margin-top: 0.4rem;
+    font-size: 1.2rem;
+    color: var(--accent-soft);
+}
+
+.section p {
+    color: var(--muted);
+}
+
+/* ------------------------------------------------ */
+/* GRID BASE                                         */
+/* ------------------------------------------------ */
+
+.grid {
+    display: grid;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+/* ------------------------------------------------ */
+/* FOOTER                                            */
+/* ------------------------------------------------ */
+
+.footer {
+    max-width: var(--max-width);
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--muted);
+}
+
+/* ------------------------------------------------ */
+/* RESPONSIVE                                        */
+/* ------------------------------------------------ */
+
+@media (max-width: 640px) {
+    .section {
+        padding: 18px 16px 20px;
+    }
+
+    .grid {
+        gap: 12px;
+    }
+}

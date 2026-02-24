@@ -1,0 +1,49 @@
+.severity-dot {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+    box-shadow: 0 0 6px currentColor;
+    cursor: help;
+}
+
+/* Tooltip */
+.severity-dot::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-out;
+    z-index: 20;
+}
+
+/* Tooltip Arrow */
+.severity-dot::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent rgba(0, 0, 0, 0.85) transparent transparent;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+/* Hover */
+.severity-dot:hover::after,
+.severity-dot:hover::before {
+    opacity: 1;
+}

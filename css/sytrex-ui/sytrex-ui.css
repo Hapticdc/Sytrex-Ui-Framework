@@ -1,0 +1,17 @@
+/* ------------------------------------------------ */
+/* SYTREX UI – GLOBAL CSS IMPORTS                   */
+/* ------------------------------------------------ */
+
+/* Theme (Farben, Gradients, Radii, Shadows) */
+@import url("./theme.css");
+
+/* Layout (Container, Sections, Grid-Basis, Footer) */
+@import url("./layout.css");
+
+/* Komponenten */
+@import url("./components/button.css");
+@import url("./components/card.css");
+@import url("./components/grid.css");
+@import url("./components/hero.css");
+@import url("./components/accordion.css");
+@import url("./components/severity.css");
