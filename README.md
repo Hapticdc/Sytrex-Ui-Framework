@@ -1,1 +1,184 @@
-# Sytrex-Ui-Framework
+
+# Sytrex UI Framework by Marcel
+
+Ein modernes, leichtes und modulares Web‑Component‑Framework für Sytrex.net.
+
+Eigene HTML‑Tags wie `<ui-card>` oder `<ui-regelwerk>` – ohne JavaScript oder CSS schreiben zu müssen.
+
+> Perfekt für alle, die einfach **vibecoden**, aber trotzdem ein sauberes, modernes und erweiterbares System wollen.
+
+## 🚀 Features
+
+- Eigene Web Components (Shadow DOM)
+- Modulares CSS‑System (Theme, Layout, Components)
+- Dynamisches Regelwerk aus JSON
+- Saubere, klare Ordnerstruktur
+- Keine Abhängigkeiten (kein React, kein Vue, kein jQuery)
+- Einfach zu erweitern
+- Perfekt für kleine bis mittlere Webprojekte
+
+## 🔌 Installation
+
+In jede HTML‑Seite einfügen:
+
+```html
+<link rel="stylesheet" href="/css/sytrex-ui/sytrex-ui.css">
+<script type="module" src="/js/sytrex-ui/sytrex-ui.js"></script>
+```
+
+Danach funktionieren alle Komponenten automatisch.
+
+## 📁 Ordnerstruktur
+
+```
+/css/sytrex-ui/
+  sytrex-ui.css
+  theme.css
+  layout.css
+  /components/
+    button.css
+    card.css
+    grid.css
+    hero.css
+    accordion.css
+    severity.css
+
+/js/sytrex-ui/
+  sytrex-ui.js
+  /components/
+    button.js
+    card.js
+    grid.js
+    hero.js
+    accordion.js
+    severity.js
+    regelwerk.js
+
+/html/components/ui/
+  button.html
+  card.html
+  grid.html
+  hero.html
+  accordion.html
+  regelwerk.html
+
+/data/
+  regelwerk-discord.json
+  regelwerk-minecraft.json
+```
+
+## 🧩 Komponenten
+
+### 🔘 Button – `<ui-button>`
+
+Ein einfacher, stylischer Button.
+
+```html
+<ui-button>Click mich</ui-button>
+```
+
+### 🃏 Card – `<ui-card>`
+
+Eine Karte mit Bild, Titel und Inhalt.
+
+```html
+<ui-card title="Regelwerk" image="/img/rules.png">
+  Alle Regeln auf einen Blick.
+</ui-card>
+```
+
+### 🧱 Grid – `<ui-grid>`
+
+Ein flexibles Grid‑Layout mit dynamischer Spaltenanzahl.
+
+```html
+<ui-grid columns="3">
+  <ui-card>...</ui-card>
+  <ui-card>...</ui-card>
+  <ui-card>...</ui-card>
+</ui-grid>
+```
+
+### 🖼 Hero – `<ui-hero>`
+
+Ein großes Hero‑Element mit Hintergrundbild und Inhalt.
+
+```html
+<ui-hero image="/img/hero/minecraft.jpg">
+  <h1>Willkommen auf Sytrex</h1>
+  <p>Ein Netzwerk, das verbindet.</p>
+</ui-hero>
+```
+
+### 📂 Accordion – `<ui-accordion>`
+
+Ein aufklappbares Accordion‑Element.
+
+```html
+<ui-accordion title="§1 Verhalten">
+  Sei respektvoll gegenüber anderen Spielern.
+</ui-accordion>
+```
+
+### 🔴 Severity Dot – `<ui-severity-dot>`
+
+Ein kleiner farbiger Punkt mit Tooltip, z. B. für Regel‑Schweregrade.
+
+```html
+<ui-severity-dot level="red"></ui-severity-dot>
+```
+
+### 📜 Regelwerk – `<ui-regelwerk>`
+
+Lädt ein komplettes Regelwerk aus einer JSON‑Datei und rendert es automatisch.
+
+```html
+<ui-regelwerk src="/data/regelwerk-discord.json"></ui-regelwerk>
+```
+
+## 📦 JSON‑Struktur
+
+Beispiel für ein Regelwerk:
+
+```json
+{
+  "sections": [
+  {
+    "title": "Allgemeines",
+    "rules": [
+    {
+      "id": 1,
+      "title": "Respekt",
+      "text": "Sei freundlich.",
+      "severity": "yellow"
+    }
+    ]
+  }
+  ],
+  "consequences": [
+  {
+    "severity": "red",
+    "label": "Temporärer Bann"
+  }
+  ],
+  "note": "Stand: Januar 2025"
+}
+```
+
+## 🛠 Troubleshooting
+
+- Stimmen die Pfade?
+- Liegt alles im richtigen Ordner?
+- Ist die JSON valide?
+- Hast du `<script type="module">` benutzt?
+- Seite neu geladen?
+
+## 📄 Lizenz
+
+Sytrex UI Framework by Marcel  
+Privates Framework für Sytrex.net  
+Nicht zur öffentlichen Weitergabe gedacht.
+
+---
+
+Made with 🌴 & ☕ von Marcel · Sytrex.net
